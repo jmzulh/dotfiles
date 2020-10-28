@@ -28,6 +28,7 @@ secondary = #72A684
 alert = #bd2c40
 
 [bar/example]
+;CHECK MONITOR NAME
 monitor = ${env:MONITOR:eDP-1-1}
 
 width = 100%
@@ -53,6 +54,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
+;INSTALL ROBOTO MONO
 font-0 = Roboto Mono:pixelsize=10;1
 font-1 = Font Awesome 5 Free Regular:pixelsize=10;1
 font-2 = Font Awesome 5 Brands Regular:pixelsize=10;1
@@ -85,7 +87,9 @@ cursor-scroll = ns-resize
 type = custom/script
 interval = 1
 format-prefix = %{F#72A684}%{F-}
-format = %{A1:alacritty --command sudo /home/jmzh/A/ExtremeCooling/ExtremeCooling4Linux-v0.3-x86_64.AppImage:}<label>%{A}
+;INSTALL EXTREME COOLING
+format = %{A1:alacritty --command sudo /home/jmzh/A/ExtremeCooling/ExtremeCooling4Linux-v0.3-x86_64.AppImage:}<label>%{A} 
+;INSTALL NVIDIA-SMI
 exec = nvidia-smi -q -d TEMPERATURE | grep GPU\ \Current\ \Temp | cut -d ':' -f 2
 
 [module/spotify]
